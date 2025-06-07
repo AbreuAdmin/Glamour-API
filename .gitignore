@@ -1,0 +1,67 @@
+# Dependências
+node_modules/
+jspm_packages/
+bower_components/
+web_modules/
+.yarn/
+.yarn-integrity
+
+# Arquivos temporários e caches
+.cache/
+.parcel-cache
+.npm
+.nyc_output
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_*/
+
+# Logs e relatórios
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# PIDs e travas
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Diretórios de build e distribuição
+build/
+dist/
+out/
+.next/
+.nuxt/
+.vuepress/dist
+.temp
+**/.vitepress/dist
+
+# Arquivos locais e de ambiente
+.env*
+.env.local
+
+# Histórico e arquivos diversos
+.node_repl_history
+*.tgz
+.DS_Store
+.lock-wscript
+
+# Configuração de ferramentas específicas
+serverless/
+docusaurus/
+fusebox/
+dynamodb/
+.vscode-test
+tern-port/
+.dockerignore
+dockerfile.dev
+docker-compose.yaml
+
+# Outros
+.qodo
