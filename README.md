@@ -1,6 +1,6 @@
 # Glamour-API
 
-ea
+API para e-commerce simples. Desenvolvida em Node.JS
 
 ## Estrutura de Pastas e Arquivos
 
@@ -15,24 +15,24 @@ ecommerce-api/
 │   │   └── env.config.js
 │   ├── controllers/
 │   │   ├── auth.controller.js
-│   │   ├── product.controller.js*
+│   │   ├── product.controller.js
 │   │   ├── user.controller.js
-│   │   └── order.controller.js*
+│   │   └── order.controller.js
 │   ├── models/
-│   │   ├── product.model.js*
+│   │   ├── product.model.js
 │   │   ├── user.model.js
-│   │   └── order.model.js*
+│   │   └── order.model.js
 │   ├── routes/
 │   │   ├── authRoutes.js
 │   │   ├── index.js
-│   │   ├── productRoutes.js*
+│   │   ├── productRoutes.js
 │   │   ├── userRoutes.js
-│   │   └── orderRoutes.js*
+│   │   └── orderRoutes.js
 │   ├── services/
-│   │   ├── product.service.js*
+│   │   ├── product.service.js
 │   │   ├── auth.service.js
 │   │   ├── user.service.js
-│   │   └── order.service.js*
+│   │   └── order.service.js
 │   └── middleware/
 │       ├── error.middleware.js
 │       └── auth.middleware.js
