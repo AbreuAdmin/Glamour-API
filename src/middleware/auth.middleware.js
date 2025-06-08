@@ -1,10 +1,8 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
-const errorMiddleware = require('./error.middleware');
+const { AppError } = require('./error.middleware');
 const { appConfig } = require('../config/env.config');
-const AppError = errorMiddleware.AppError;
 
-// Middleware para proteger rotas com JWT
 async function protect(req, res, next) {
   let token;
 

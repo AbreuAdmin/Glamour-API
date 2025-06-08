@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
-const errorMiddleware = require('../middleware/error.middleware');
+const { AppError } = require('../middleware/error.middleware');
 const { appConfig } = require('../config/env.config');
-const { AppError } = errorMiddleware;
 
 async function registerUser(userData) {
   const { username, email, password } = userData;
@@ -26,7 +25,7 @@ async function loginUser(email, password) {
   }
 
   // Compara a senha fornecida com a senha hashed no banco de dados
-  const isMatch = await user.comparePassword(password);
+  const isMatch = await user.matchPassword(password);
   if (!isMatch) {
     throw new AppError('Email ou senha inválidos.', 401);
   }

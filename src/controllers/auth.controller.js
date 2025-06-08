@@ -1,6 +1,5 @@
 const authService = require('../services/auth.service');
-const errorMiddleware = require('../middleware/error.middleware');
-const AppError = errorMiddleware.AppError;
+const { AppError } = require('../middleware/error.middleware');
 
 async function register(req, res, next) {
   try {
