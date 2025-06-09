@@ -35,7 +35,6 @@ async function protect(req, res, next) {
   }
 }
 
-// Middleware que permite apenas admins
 function isAdmin(req, res, next) {
   if (!req.user || req.user.role !== 'admin') {
     return next(new AppError('Acesso negado: apenas administradores podem realizar esta ação.', 403));
@@ -43,7 +42,6 @@ function isAdmin(req, res, next) {
   next();
 }
 
-// Middleware que permite apenas o superadmin (primeiro admin) fazer certas ações
 function isSuperAdmin(req, res, next) {
   if (!req.user || !req.user.isSuperAdmin) {
     return next(new AppError('Acesso negado: apenas o superadmin pode realizar esta ação.', 403));

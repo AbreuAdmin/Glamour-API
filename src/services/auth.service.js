@@ -24,7 +24,6 @@ async function loginUser(email, password) {
     throw new AppError('Email ou senha inválidos.', 401);
   }
 
-  // Compara a senha fornecida com a senha hashed no banco de dados
   const isMatch = await user.matchPassword(password);
   if (!isMatch) {
     throw new AppError('Email ou senha inválidos.', 401);

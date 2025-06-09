@@ -3,13 +3,13 @@ const { AppError } = require('../middleware/error.middleware');
 
 async function register(req, res, next) {
   try {
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
-    if (!name || !email || !password) {
+    if (!username || !email || !password) {
       return next(new AppError('Por favor, preencha todos os campos.', 400));
     }
 
-    const newUser = await authService.registerUser({ name, email, password });
+    const newUser = await authService.registerUser({ username, email, password });
 
     res.status(201).json({
       message: 'Usuário registrado com sucesso!',
