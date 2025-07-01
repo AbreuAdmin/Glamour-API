@@ -14,7 +14,7 @@ const connectDB = async () => {
   } catch (err) {
     console.error("Erro ao conectar ao MongoDB:");
     console.error(`Detalhes: ${err.message}`);
-    // Opcional: Logar o stack trace apenas em ambiente de desenvolvimento para depuração
+    // Logar o stack trace apenas em ambiente de desenvolvimento para depuração
     if (process.env.NODE_ENV !== "production") {
       console.error(err.stack);
     }

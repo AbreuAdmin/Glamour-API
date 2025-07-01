@@ -2,7 +2,7 @@ class AppError extends Error {
   constructor(message, statusCode) {
     super(message);
     this.statusCode = statusCode || 500;
-    this.isOperational = true;  // Marca como erro operacional
+    this.isOperational = true;
     Error.captureStackTrace(this, this.constructor);  // Para evitar loops de stack trace
   }
 }

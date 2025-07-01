@@ -40,7 +40,31 @@ async function login(req, res, next) {
   }
 }
 
+async function logout(req, res, next) {
+  try {
+    res.status(200).json({
+      message: 'Logout bem-sucedido!',
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+async function validateToken(req, res) {
+  try {
+    res.status(200).json({
+      status: 'success',
+      message: 'Token válido!',
+      user: req.user,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   register,
   login,
+  logout,
+  validateToken,
 };

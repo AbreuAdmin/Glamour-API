@@ -6,6 +6,7 @@ const appConfig = {
   jwtSecret: process.env.JWT_SECRET || "sua_chave_secreta_jwt_padrao_tts_jkst",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "1h",
   mongoURI: process.env.MONGO_URI || "mongodb://localhost:27017/seu_banco_de_dados",
+  frontendUrl: process.env.FRONTEND_URL || "http://localhost:3000",
 };
 
 module.exports = { appConfig };

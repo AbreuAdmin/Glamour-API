@@ -43,6 +43,47 @@ ecommerce-api/
 ├── package-lock.json
 ├── package.json
 └── README.md
+
 ```
+
+## Estrutura das Rotas da API
+
+Home / Catálogo de Produtos:
+
+* GET /products – Listar produtos.
+
+* GET /products/:id – Detalhes do produto.
+
+* POST /products – Criar novo produto.
+
+* PUT /products/:id – Atualizar produto.
+
+* DELETE /products/:id – Excluir produto.
+
+Login / Registro:
+
+* POST /auth/login – Login.
+
+* POST /auth/register – Registro de usuário.
+
+* POST /auth/logout – Sair.
+
+Pedidos:
+
+* POST /orders – Fazer pedido
+
+* GET /orders – Listar pedidos.
+
+* DELETE /orders/:id – Excluir pedido.
+
+Admins:
+
+* GET /users – Listar administradores.
+
+* GET /users:id – Ver um administrador especifico.
+
+* PUT /users:id – Atualizar administrador
+
+* DELETE /users/:id – Deletar administrador
 
 ---
